@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/jeromeetienne/ar.js@1.7.2/aframe/build/aframe-ar.min.js"></script>
+<head>
+ <title>AR.js Example</title>
+</head>
+<body style="margin: 0; overflow: hidden;">
+ <a-scene embedded arjs>
+    <a-marker preset="hiro">
+        <!-- Apply opacity animation to the cylinder with transparent material -->
+        <a-cylinder 
+            position="0 0 0" 
+            radius="1" 
+            height="1" 
+            material="color: red; opacity: 1; transparent: true;" 
+            animation="property: material.opacity; to: 0; dur: 1500; dir: alternate; loop: true">
+        </a-cylinder>
+    </a-marker>
+    <a-entity camera></a-entity>
+ </a-scene>
+</body>
+</html>
